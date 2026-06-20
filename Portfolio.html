@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../UI-Developer/index.html">
+    <link rel="stylesheet" href="./port.html">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">5.0/css/all.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        function Reset() {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+
+        }
+        function Send() {
+
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+
+            if (name === "" || email === "" || message === "") {
+
+                alert("Please fill all fild ")
+                return;
+            }
+
+            var whatsappurl =
+                "https://wa.me/918983476585?text=" +
+                "Name: " + name +
+                "%0AEmail: " + email +
+                "%0AMessage: " + message;
+
+            window.open(whatsappurl, "_blank");
+
+
+
+
+
+        }
+    </script>
+
+
+    <title>Portfolio</title>
+
+    <style>
+        section {
+            padding: 80px 0;
+        }
+
+        .hero {
+            height: 100vh;
+            background: #198754;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Rushikesh Pund</h1>
+            <p class="lead">Web Developer | Designer</p>
+            <a href="#contact" class="btn btn-light mt-3">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <img src="https://via.placeholder.com/400" class="img-fluid rounded">
+                </div>
+                <div class="col-md-7">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, expedita.</p>
+                    <div class="progress  mb-2">
+                        <div class="progress-bar progress-bar-striped bg-success" style="width: 90%">HTML</div>
+                    </div>
+                    <div class="progress mb-2">
+                        <div class="progress-bar progress-bar-striped bg-info" style="width: 85%">CSS</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" style="width: 80%">JavaScript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2 class="text-center bg-warning rounded-5 mb-5">Services</h2>
+            <div class="row text-center border border-danger">
+                <div class="col-md-4 border border-end ">
+                    <i class="bi-paint-bucket "></i>
+                    <h4>Web Design</h4>
+                </div>
+
+                <div class="col-md-4 border border-end">
+                    <i class=" bi-menu-button-fill "></i>
+                    <h4>Development</h4>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi-search mb-2"></i>
+                    <h4>SEO</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="text-center mb-5">Portfolio</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="../ABC School/public/forgot.html" target="_blank">
+
+                        <img src="./public/image/49 KB passport.jpg" class="img-fluid">
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <div class="row">
+
+
+                <div class="col-md-6">
+
+
+                    <p class="bi bi-github"><a href="https://github.com/rishirich010" target="_blank">
+                            github.com/rishirich010
+                        </a></p>
+
+
+
+
+                    <p><i class="fa fa-envelope"></i> info@example.com</p>
+                    <p><i class="fa fa-phone"></i> +91 1234567890</p>
+                </div>
+                <div class="col-md-6">
+
+
+                    <form class="form-control">
+                        <input id="name" class="form-control mb-2" placeholder="Name">
+                        <input id="email" class="form-control mb-2" placeholder="Email">
+                        <textarea id="message" class="form-control mb-2" placeholder="Message"></textarea>
+
+                        <button onclick="Reset()" class="btn btn-danger">Reset</button>
+                        <button onclick="Send()" class="btn btn-success">Send</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        © 2026 My Portfolio
+    </footer>
+
+
+
+</body>
+
+</html>
